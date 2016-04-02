@@ -21,7 +21,14 @@ public class Spawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         spawn = this;
-        spawnItems();
+        if (SceneManager.GetActiveScene().name.Equals("3DLevel"))
+        {
+            spawnItems();
+        }
+        else
+        {
+            items = GameObject.FindGameObjectsWithTag("Item").Length;
+        }
 	}
 
     public void spawnItems()
@@ -36,9 +43,15 @@ public class Spawner : MonoBehaviour {
     {
         if(--items == 0)
         {
-            spawn = null;
-            print("Win!");
-            SceneManager.LoadScene("2DLevel");
+            spawn = null;            
+            if (SceneManager.GetActiveScene().name.Equals("3DLevel"))
+            {
+                SceneManager.LoadScene("2DLevel");
+            }
+            else
+            {
+                SceneManager.LoadScene("2DLevel2");
+            }
         }
     }
 }

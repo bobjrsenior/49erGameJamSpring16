@@ -8,4 +8,10 @@ public class Item : MonoBehaviour {
         Spawner.spawn.gotItem();
         Destroy(this.gameObject);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Spawner.spawn.gotItem();
+        Destroy(this.gameObject);
+    }
 }
