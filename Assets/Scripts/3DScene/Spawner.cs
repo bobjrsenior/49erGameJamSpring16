@@ -48,9 +48,13 @@ public class Spawner : MonoBehaviour {
             {
                 SceneManager.LoadScene("2DLevel");
             }
-            else
+            else if(SceneManager.GetActiveScene().name.Equals("2DLevel"))
             {
                 SceneManager.LoadScene("2DLevel2");
+            }
+            else if (SceneManager.GetActiveScene().name.Equals("2DLevel2"))
+            {
+                SceneManager.LoadScene("1DLevel");
             }
         }
     }
