@@ -520,7 +520,9 @@ MonoBehaviour:
 
     WASD and Space when applicable
 
-    Escape to quit'
+    Escape to quit
+
+    1-4 changes quality (first level only)'
 --- !u!222 &1264071065
 CanvasRenderer:
   m_ObjectHideFlags: 0

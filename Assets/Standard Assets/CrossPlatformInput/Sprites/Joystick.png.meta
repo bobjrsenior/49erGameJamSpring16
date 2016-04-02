@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 3d8675433a508ec47b8f895201eacf20
+guid: 638fc845a025ad14380085a7c6b6c5e2
 TextureImporter:
   fileIDToRecycleName:
-    21300000: JumpButton
+    21300000: Joystick
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
