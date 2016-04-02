@@ -8,6 +8,11 @@ public class Mouse : MonoBehaviour {
     /// </summary>
     private float movementScale = 16.0f;
 
+    void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     // Update is called once per frame
     void FixedUpdate () {
         transform.Translate(new Vector3(Input.GetAxis("Mouse X") * movementScale * Time.fixedDeltaTime, Input.GetAxis("Mouse Y") * movementScale * Time.fixedDeltaTime, 0));

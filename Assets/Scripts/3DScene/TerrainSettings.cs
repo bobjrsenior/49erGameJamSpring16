@@ -8,10 +8,13 @@ public class TerrainSettings : MonoBehaviour {
     /// </summary>
     private Terrain terrain;
 
+    private float terrainQuality;
+
 	// Use this for initialization
 	void Awake () {
         terrain = GetComponent<Terrain>();
-        terrain.detailObjectDistance = QualitySettings.quality.terrainDetailDistance;
+        terrainQuality = QualitySettings.quality.terrainDetailDistance;
+        terrain.detailObjectDistance = terrainQuality;
 
     }
 	
@@ -19,6 +22,14 @@ public class TerrainSettings : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("TerrainDraw")) {
             terrain.detailObjectDistance += Input.GetAxis("TerrainDraw") * 5;
+            terrainQuality = terrain.detailObjectDistance;
+            QualitySettings.quality.terrainDetailDistance = terrainQuality;
         }
-	}
+
+        if(terrainQuality != QualitySettings.quality.terrainDetailDistance)
+        {
+            terrainQuality = QualitySettings.quality.terrainDetailDistance;
+            terrain.detailObjectDistance = terrainQuality;
+        }
+    }
 }

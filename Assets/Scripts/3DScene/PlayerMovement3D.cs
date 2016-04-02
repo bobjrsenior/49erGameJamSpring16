@@ -24,6 +24,8 @@ public class PlayerMovement3D : MonoBehaviour {
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 	

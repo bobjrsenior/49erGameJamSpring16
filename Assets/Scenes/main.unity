@@ -518,11 +518,11 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Instructions
 
-    WASD and Space when applicable
+    WASD, Space, and Mouse when applicable
 
     Escape to quit
 
-    1-4 changes quality (first level only)'
+    1-5 changes quality (first level only)'
 --- !u!222 &1264071065
 CanvasRenderer:
   m_ObjectHideFlags: 0
