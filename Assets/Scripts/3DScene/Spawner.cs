@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour {
     /// <summary>
     /// How many items to spawn/how many items are left
     /// </summary>
-    private int items = 1;
+    private int items = 5;
 
     public GameObject itemPrefab;
 

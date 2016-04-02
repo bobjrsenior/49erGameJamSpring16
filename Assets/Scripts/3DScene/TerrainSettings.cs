@@ -11,7 +11,9 @@ public class TerrainSettings : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         terrain = GetComponent<Terrain>();
-	}
+        terrain.detailObjectDistance = QualitySettings.quality.terrainDetailDistance;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
