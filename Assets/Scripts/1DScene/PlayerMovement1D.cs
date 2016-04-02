@@ -43,6 +43,11 @@ public class PlayerMovement1D : MonoBehaviour {
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         if (Input.GetButtonDown("Jump"))
         {
             frozen = true;

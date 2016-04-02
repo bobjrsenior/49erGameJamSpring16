@@ -41,9 +41,6 @@ public class PlayerMovement2D : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
-
-
         //Grabbing velocity preserves velocity components not used
         Vector3 velocity = rigidbody.velocity;
         if (Input.GetButton("Horizontal"))
@@ -76,6 +73,14 @@ public class PlayerMovement2D : MonoBehaviour {
 
         rigidbody.velocity = velocity;
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collider)

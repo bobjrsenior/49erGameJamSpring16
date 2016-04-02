@@ -10,5 +10,9 @@ public class EndScene : MonoBehaviour {
         {
             SceneManager.LoadScene(0);
         }
-	}
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }

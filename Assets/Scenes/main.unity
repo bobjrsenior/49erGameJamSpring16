@@ -477,7 +477,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Instructions
 
-    WASD and Space when applicable'
+    WASD and Space when applicable
+
+    Escape to quit'
 --- !u!222 &1264071065
 CanvasRenderer:
   m_ObjectHideFlags: 0

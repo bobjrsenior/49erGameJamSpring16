@@ -11,5 +11,9 @@ public class MainScene : MonoBehaviour {
         {
             SceneManager.LoadScene("3DLevel");
         }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }

@@ -28,7 +28,8 @@ public class PlayerMovement3D : MonoBehaviour {
 
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate ()
+    {
         Vector3 velocity = rigidbody.velocity;
 
         if(Mathf.Abs(velocity.x) > maxMovementSpeed)
@@ -63,5 +64,13 @@ public class PlayerMovement3D : MonoBehaviour {
         rigidbody.velocity = velocity;
 
         rigidbody.AddRelativeForce(new Vector3(acceleration * Input.GetAxis("Horizontal"), 0, acceleration * Input.GetAxis("Vertical")));
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }
