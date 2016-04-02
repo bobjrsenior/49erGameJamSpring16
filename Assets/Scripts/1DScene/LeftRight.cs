@@ -5,6 +5,7 @@ public class LeftRight : MonoBehaviour {
 
     private float time = 0.0f;
 
+    public float offsetRadians = 0.0f;
     private float initialX;
 
     void Start()
@@ -16,6 +17,6 @@ public class LeftRight : MonoBehaviour {
     void FixedUpdate()
     {
         time += Time.fixedDeltaTime;
-        transform.position = new Vector3(initialX + 5 * Mathf.Sin(Mathf.PI * time * 0.3f), 0, 0);
+        transform.position = new Vector3(initialX + 5 * Mathf.Sin(offsetRadians + Mathf.PI * time * 0.3f), transform.position.y, 0);
     }
 }

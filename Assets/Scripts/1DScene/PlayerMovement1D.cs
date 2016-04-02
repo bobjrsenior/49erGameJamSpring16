@@ -6,7 +6,7 @@ public class PlayerMovement1D : MonoBehaviour {
     /// <summary>
     /// Movement speed in Units/Second
     /// </summary>
-    private float movementSpeed = 4.0f;
+    private float movementSpeed = 7.0f;
 
     /// <summary>
     /// This gameobject's Rigidbody2D
@@ -34,26 +34,29 @@ public class PlayerMovement1D : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate() {
-        if (Input.GetButtonDown("Jump"))
-        {
-            frozen = !frozen;
-            if (frozen)
-            {
-                collider.enabled = false;
-                renderer.enabled = false;
-                rigidbody.velocity = Vector2.zero;
-            }
-            else
-            {
-                collider.enabled = true;
-                renderer.enabled = true;
-            }
-        }
-
         if (!frozen) { 
             rigidbody.velocity = new Vector3(Input.GetAxis("Horizontal") * movementSpeed, 0, 0);
         }
 
         Camera.main.transform.position = new Vector3(transform.position.x, 0, Camera.main.transform.position.z);
 	}
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            frozen = true;
+
+            collider.enabled = false;
+            renderer.enabled = false;
+            rigidbody.velocity = Vector2.zero;
+        }
+        else if (Input.GetButtonUp("Jump"))
+        {
+            frozen = false;
+
+            collider.enabled = true;
+            renderer.enabled = true;
+        }
+    }
 }

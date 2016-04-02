@@ -5,6 +5,10 @@ public class UpDown : MonoBehaviour {
 
     private float time = 0.0f;
 
+    public float offsetRadians = 0.0f;
+
+    public float factor = 0.8f;
+
     private float initialY;
 
     void Start()
@@ -15,6 +19,6 @@ public class UpDown : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         time += Time.fixedDeltaTime;
-        transform.position = new Vector3(0, initialY + 5 * Mathf.Sin(Mathf.PI * time * 0.8f), 0);
+        transform.position = new Vector3(transform.position.x, initialY + 5 * Mathf.Sin(offsetRadians + Mathf.PI * time * factor), 0);
 	}
 }
