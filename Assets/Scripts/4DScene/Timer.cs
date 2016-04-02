@@ -16,7 +16,12 @@ public class Timer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    time += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+        time += Time.deltaTime;
         text.text = "" + ((int)(time * 100)) / 100.0f;
     }
 }

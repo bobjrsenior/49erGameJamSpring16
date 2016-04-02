@@ -55,7 +55,7 @@ public class QualitySettings : MonoBehaviour {
     public void setQualitySuperMaximum()
     {
         qualityLevel = "SuperMaximum";
-        terrainDetailDistance = 500;
+        terrainDetailDistance = 1000;
         RenderSettings.fog = true;
         Camera.main.farClipPlane = 1000;
     }
