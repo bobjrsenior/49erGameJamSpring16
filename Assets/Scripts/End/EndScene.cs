@@ -14,5 +14,9 @@ public class EndScene : MonoBehaviour {
         {
             Application.Quit();
         }
+        else if (Input.GetKeyDown(KeyCode.B))
+        {
+            SceneManager.LoadScene("Baseball");
+        }
     }
 }
