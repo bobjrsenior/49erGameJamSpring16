@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/0DLevel.unity
   - enabled: 1
     path: Assets/Scenes/End.unity
+  - enabled: 1
+    path: Assets/Scenes/Baseball.unity

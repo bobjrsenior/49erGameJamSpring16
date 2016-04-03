@@ -12,6 +12,7 @@ GameObject:
   - 135: {fileID: 13564522}
   - 23: {fileID: 2373994}
   - 54: {fileID: 5432916}
+  - 114: {fileID: 11419208}
   m_Layer: 8
   m_Name: Baseball
   m_TagString: Untagged
@@ -79,6 +80,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &11419208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db509799b6b7734f9821de83e20147e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &13564522
 SphereCollider:
   m_ObjectHideFlags: 1

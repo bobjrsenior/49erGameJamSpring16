@@ -14,7 +14,7 @@ public class MainScene : MonoBehaviour {
     {
         if (Input.GetButtonDown("Jump"))
         {
-            SceneManager.LoadScene("4DLevel");
+            SceneManager.LoadScene("3DLevel");
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {

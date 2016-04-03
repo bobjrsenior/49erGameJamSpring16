@@ -10,11 +10,6 @@ public class BallSpawner : MonoBehaviour {
     public GameObject baseballPrefab;
 
     public Transform mound;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -24,7 +19,7 @@ public class BallSpawner : MonoBehaviour {
             timer = Random.Range(2.5f, 8.0f);
             if (pitch)
             {
-
+                (Instantiate(baseballPrefab, mound.position, Quaternion.identity) as GameObject).GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(-90.0f, -70.0f), Random.Range(2.0f, 3.0f), 0); ;
             }
             else
             {
@@ -32,4 +27,12 @@ public class BallSpawner : MonoBehaviour {
             }
         }
 	}
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            pitch = !pitch;
+        }
+    }
 }

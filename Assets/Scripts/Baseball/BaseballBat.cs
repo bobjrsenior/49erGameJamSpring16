@@ -23,10 +23,12 @@ public class BaseballBat : MonoBehaviour {
         rigidbody.angularVelocity = new Vector3(0, -rotationSpeed * Input.GetAxis("Jump"), 0);
         //rigidbody.MoveRotation(Quaternion.Euler(rigidbody.rotation.eulerAngles + new Vector3(0, -rotationSpeed * Input.GetAxis("Jump"), 0)));
 
-        if(transform.eulerAngles.y < 180)
+        if(transform.eulerAngles.y < 120)
         {
             rigidbody.angularVelocity = Vector3.zero;
         }
+
+        transform.Translate(0, -2.0f * Input.GetAxis("Vertical") * Time.fixedDeltaTime, 0);
 	}
 
     void Update()
